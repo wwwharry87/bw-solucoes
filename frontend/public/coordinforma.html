@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoordInforma</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo_c.png" alt="Logo CoordInforma">
+            <h1>CoordInforma</h1>
+            <h2 class="icons-group">
+                <i class="fas fa-exchange-alt navigation-icon" onclick="window.location.href='respinforma.html'"></i>
+                <i class="fas fa-sign-out-alt logout-icon" onclick="logout()"></i>
+            </h2>
+        </div>
+        <div class="divider"></div>
+        <div class="nav-actions">
+            <div class="dropdown-group">
+                <label for="municipio" class="municipio-label">Município:</label>
+                <select id="municipio" onchange="trocarMunicipio()">
+                    <option value="">Selecione um município</option>
+                </select>
+            </div>
+            <div class="dropdown-group">
+                <label for="escola">Escola:</label>
+                <select id="escola" onchange="filtrarTabela()">
+                    <option value="">Todas as Escolas</option>
+                </select>
+            </div>
+            <div class="dropdown-group">
+                <label for="coordenador">Coordenador:</label>
+                <select id="coordenador" onchange="filtrarTabela()">
+                    <option value="">Todos os Coordenadores</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Modal de QR Code -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close" onclick="fecharModal()">&times;</span>
+                <h3>Conecte o WhatsApp</h3>
+                <div id="qr-code">Carregando QR Code...</div>
+            </div>
+        </div>
+        <div id="overlay" class="overlay hidden"></div>
+
+        <!-- Status do WhatsApp e botão de envio -->
+        <div class="send-bar">
+            <div class="status-container">
+                <i class="fas fa-circle whatsapp-status" id="whatsapp-status"></i>
+            </div>
+            <div class="action-container">
+                <button id="enviar-btn" onclick="enviarMensagem()" disabled>
+                    <i class="fab fa-whatsapp whatsapp-icon"></i> Enviar
+                </button>
+                <div id="progress-bar" class="progress-bar hidden">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabela para exibir os dados do CSV -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Turma</th>
+                        <th>Professor</th>
+                        <th>Disciplina</th>
+                        <th>Data</th>
+                        <th>Falta</th>
+                    </tr>
+                </thead>
+                <tbody id="dados-list"></tbody>
+            </table>
+        </div>
+
+        <div id="notification" class="notification hidden">
+            <span class="emoji">😊</span> Mensagens enviadas com sucesso!
+        </div>
+    </div>
+
+    <script src="coordinforma.js"></script>
+</body>
+</html>
