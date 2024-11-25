@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+node_module/
+=======
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+>>>>>>> 736285f (Primeiro commit bw-solucoes)

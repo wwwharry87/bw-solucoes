@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f8fb;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header img {
+    height: 60px;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 2.2em;
+    color: #28a745;
+    margin: 0;
+    text-align: left;
+}
+
+.icons-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    flex: 1;
+}
+
+.icons-group i {
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icons-group .navigation-icon {
+    color: #007bff;
+}
+
+.icons-group .navigation-icon:hover {
+    color: #0056b3;
+}
+
+.icons-group .logout-icon {
+    color: #666;
+}
+
+.icons-group .logout-icon:hover {
+    color: #ff0000;
+}
+
+.divider {
+    width: 100%;
+    height: 3px;
+    background-color: #28a745;
+    border-radius: 2px;
+    margin: 10px 0;
+}
+
+/* Dropdowns ajustados */
+.nav-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.dropdown-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-group label {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f8f8f8;
+    color: #333;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+select:focus {
+    border-color: #28a745;
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* Ajustes de responsividade */
+@media (max-width: 800px) {
+    h1 {
+        font-size: 1.5em; /* Reduz tamanho do título */
+    }
+
+    .icons-group i {
+        font-size: 1.2em; /* Reduz tamanho dos ícones */
+    }
+
+    .nav-actions {
+        flex-direction: column; /* Dropdowns ficam um abaixo do outro */
+    }
+}
+
+/* Botão "Enviar" ajustado */
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px; /* Reduzi a altura do botão */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Botão continua ocupando 100% da largura */
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    transform: scale(1.02); /* Suave aumento ao clicar */
+}
+
+/* Barra de progresso */
+.progress-bar {
+    width: 100%; /* Barra ocupa 100% da largura */
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    margin-top: 10px; /* Espaçamento entre o botão e a barra */
+}
+
+.progress-bar .progress {
+    height: 100%;
+    background-color: #28a745;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.progress-bar.show {
+    display: block;
+}
+
+/* Tabela */
+.table-container {
+    margin-top: 20px;
+    width: 100%; /* Garante largura total */
+    overflow: hidden; /* Remove scroll lateral */
+}
+
+table {
+    width: 100%; /* Tabela ocupa toda a largura */
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 800px) {
+    table {
+        font-size: 8px; /* Reduz tamanho da fonte em telas menores */
+    }
+
+    th, td {
+        padding: 5px; /* Reduz padding em telas menores */
+    }
+}
+
+/* Notificação */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    display: none;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.notification.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    display: none;
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.modal-content h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.overlay.show {
+    display: block;
+}

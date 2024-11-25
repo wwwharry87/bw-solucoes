@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>BW Soluções Inteligentes</h1>
+        </div>
+        <div class="input-group">
+            <label for="username">Usuário</label>
+            <input type="text" id="username" placeholder="Digite seu usuário">
+        </div>
+        <div class="input-group" id="password-group" style="display: none;">
+            <label for="password">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha">
+        </div>
+        <button class="login-btn" id="login-btn" onclick="fazerLogin()">Próximo</button>
+        <div class="error-message" id="error-message">Usuário ou senha inválidos.</div>
+        <span class="forgot-password" onclick="abrirTelaRedefinicao()">Esqueceu a senha?</span>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+2024/11/24-11:00:21.054 8903 Reusing MANIFEST /Users/wesleymelo/bw-solucoes/backend/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/11/24-11:00:21.054 8903 Recovering log #345
+2024/11/24-11:00:21.063 8903 Reusing old log /Users/wesleymelo/bw-solucoes/backend/.wwebjs_auth/session/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000345.log 
+2024/11/24-11:00:26.221 1ea03 Level-0 table #354: started
+2024/11/24-11:00:26.231 1ea03 Level-0 table #354: 157475 bytes OK
+2024/11/24-11:00:26.244 1ea03 Delete type=0 #345
+2024/11/24-11:00:26.244 1ea03 Manual compaction at level-0 from '\x001\x00\x00\x00' @ 72057594037927935 : 1 .. '\x002\x00\x00\x00' @ 0 : 0; will stop at (end)
+2024/11/24-11:00:26.332 1eb03 Compacting 1@1 + 5@2 files
+2024/11/24-11:00:26.378 1eb03 Generated table #355@1: 53922 keys, 2216036 bytes
+2024/11/24-11:00:26.417 1eb03 Generated table #356@1: 26559 keys, 2178805 bytes
+2024/11/24-11:00:26.442 1eb03 Generated table #357@1: 12510 keys, 2140251 bytes
+2024/11/24-11:00:26.514 1eb03 Generated table #358@1: 97730 keys, 2248172 bytes
+2024/11/24-11:00:26.572 1eb03 Generated table #359@1: 93233 keys, 1915236 bytes
+2024/11/24-11:00:26.572 1eb03 Compacted 1@1 + 5@2 files => 10698500 bytes
+2024/11/24-11:00:26.581 1eb03 compacted to: files[ 0 0 5 0 0 0 0 ]
+2024/11/24-11:00:26.582 1eb03 Delete type=2 #348
+2024/11/24-11:00:26.582 1eb03 Delete type=2 #349
+2024/11/24-11:00:26.582 1eb03 Delete type=2 #354
+2024/11/24-11:00:26.582 1eb03 Delete type=2 #350
+2024/11/24-11:00:26.582 1eb03 Delete type=2 #351
+2024/11/24-11:00:26.582 1eb03 Delete type=2 #347
